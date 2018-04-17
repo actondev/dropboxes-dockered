@@ -1,0 +1,25 @@
+* Multiple dropbox instaces - dockerized
+  .. what the title says :)
+
+  The puprose of this is to have multiple dropbox instances in your machine. For me it started when I wanted to have both my personal & my work dropbox account in the same machine.
+
+** Usage
+   TODO: improve
+
+   1. run the =bootstrap.sh= script
+   2. run =docker-compose logs=
+	  1. check for lines like 
+		 =dropbox-personal_1  | Please visit https://www.dropbox.com/cli_link_nonce?nonce=xyz to link this device.=
+	  2. visit the link
+
+** Technical details
+   + docker images from =debian:stretch=
+   + installing docker from the =deb= file provided from the 
+
+* Future work
+
+** Easier login/association
+   Wrap the dropoxd (which is  ran by the =entrypoint.sh=) around another process (node?), and looks for  =please visit htpp...= lines in the logs, and will create an html file that will get you to that url
+
+** Sync status
+   Is there a way to monitor the sync status? as well this could be wrapped around another process (node?) and write to a sync.log file (which can then be =tail=ed)

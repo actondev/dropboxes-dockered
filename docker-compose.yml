@@ -1,0 +1,18 @@
+version: '3.2'
+services:
+  dropbox-personal:
+    build: ./_code
+    hostname: dropbox-personal
+    env_file:
+      - .env
+    volumes:
+      - ./personal/.dropbox:/root/.dropbox
+      - ./personal/Dropbox:/root/Dropbox
+  dropbox-work:
+    build: ./_code
+    hostname: dropbox-personal
+    env_file:
+      - .env
+    volumes:
+      - ./work/.dropbox:/root/.dropbox
+      - ./work/Dropbox:/root/Dropbox
