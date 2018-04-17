@@ -12,10 +12,6 @@
 		 =dropbox-personal_1  | Please visit https://www.dropbox.com/cli_link_nonce?nonce=xyz to link this device.=
 	  2. visit the link
 
-** Technical details
-   + docker images from =debian:stretch=
-   + installing docker from the =deb= file provided from the 
-
 * Future work
 
 ** Easier login/association
@@ -23,3 +19,12 @@
 
 ** Sync status
    Is there a way to monitor the sync status? as well this could be wrapped around another process (node?) and write to a sync.log file (which can then be =tail=ed)
+
+* Technical details
+  + docker images from =debian:stretch=
+  + installing docker from the =deb= file provided from the 
+
+** Getting the dropbox tar
+   + wget https://www.dropbox.com/download?plat=lnx.x86_64 -O dropbox.tar.gz
+
+   This can/should be done inside the dockerfile.. but would download 2 times, 1 per instance.. hmm..
