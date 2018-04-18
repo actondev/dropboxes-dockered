@@ -20,8 +20,7 @@
    Is there a way to monitor the sync status? as well this could be wrapped around another process (node?) and write to a sync.log file (which can then be =tail=ed)
    
 * Technical details
-  + docker images from =debian:stretch=
-  + installing docker from the =deb= file provided from the 
+  + docker image from =debian:stretch=
 	
 ** Getting the dropbox tar
    + wget https://www.dropbox.com/download?plat=lnx.x86_64 -O dropbox.tar.gz
