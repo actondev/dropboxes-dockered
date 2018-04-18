@@ -10,6 +10,8 @@
    2. run =docker-compose logs=
 	  there check for lines like 
 	  ~Please visit https://www.dropbox.com/cli_link_nonce?nonce=xyz~. Go there and put your credentials to link :)
+
+   After you're synced and the =Dropbox= file is created, you should probably run the =permissions.sh= script, cause the =Dropbox= folder will appear to be owned by =root= (cause it's modified by the docker instance)
 	  
 * Future work
   
@@ -18,6 +20,9 @@
    
 ** Sync status
    Is there a way to monitor the sync status? as well this could be wrapped around another process (node?) and write to a sync.log file (which can then be =tail=ed)
+
+** Permissions
+   The folder/files are owned by =root= (dropbox is running by the root user inside docker)
    
 * Technical details
   + docker image from =debian:stretch=
