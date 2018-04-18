@@ -11,7 +11,7 @@
 	  there check for lines like 
 	  ~Please visit https://www.dropbox.com/cli_link_nonce?nonce=xyz~. Go there and put your credentials to link :)
 
-   After you're synced and the =Dropbox= file is created, you should probably run the =permissions.sh= script, cause the =Dropbox= folder will appear to be owned by =root= (cause it's modified by the docker instance)
+   After you're synced and the =Dropbox= folder is created in the subfolders (eg personal, work), you should run the =permissions.sh= script, cause the =Dropbox= folder will appear to be owned by =root= (cause it's modified by the docker instance)
 	  
 * Future work
   
