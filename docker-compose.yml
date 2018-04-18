@@ -10,7 +10,7 @@ services:
       - ./personal/Dropbox:/root/Dropbox
   dropbox-work:
     build: ./_code
-    hostname: dropbox-personal
+    hostname: dropbox-work
     env_file:
       - .env
     volumes:
